@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Deixa o fundo com cor pastel suave */
+body {
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caixa central */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #5c5c8a;
+}
+
+/* Formulário de busca */
+form {
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #a29bfe;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c5ce7;
+}
+
+/* Resultados */
+h2 {
+    color: #636e72;
+}
+
+ul.resultados {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul.resultados li {
+    background: #dfe6e9;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #74b9ff;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #0984e3;
+}

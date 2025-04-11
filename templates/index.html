@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CWI Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>CWI Checker 🔍</h1>
+
+    <form method="POST" action="/">
+        <input type="text" name="termo" placeholder="Digite o nome do item..." value="{{ termo }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if resultados %}
+        <h2>Resultados encontrados:</h2>
+        <ul class="resultados">
+            {% for item in resultados %}
+                <li><strong>{{ item.nome_encontrado }}</strong> (Arquivo: {{ item.arquivo }})</li>
+            {% endfor %}
+        </ul>
+    {% elif termo %}
+        <h2>Nenhum resultado encontrado para "{{ termo }}"</h2>
+    {% endif %}
+
+    {% if relatorio %}
+    <div style="margin-top: 20px;">
+        <a class="btn-download" href="{{ url_for('download', nome_arquivo=relatorio) }}">📥 Baixar Relatório</a>
+    </div>
+{% endif %}
+
+</div>
+
+</body>
+</html>

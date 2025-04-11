@@ -1,0 +1,43 @@
+FASE 1 - ORGANIZAÇÃO DE PASTAS:
+cwi_checker_web/
+├── app.py
+├── crawler/
+│   ├── crawler_cwi.py
+│   ├── validacoes.py
+├── exemplos_cwi/
+│   └── exemplo1.html
+├── static/
+│   └── styles.css
+├── templates/
+│   └── index.html
+└── relatorios/
+    └── relatorio_erros_2025-04-11_19-15-03.txt
+
+
+O Flask usa o Jinja2, que é um motor de template.
+Quando você coloca {% %} → você escreve lógica no HTML.
+Quando você coloca {{ }} → você exibe variáveis no HTML.
+{% if resultados %}	Se existir resultados (lista não vazia), mostra o que vem abaixo.
+<h2>Resultados encontrados:</h2>	Um título simples.
+{% for item in resultados %}	Para cada item da lista resultados, repete o que estiver dentro.
+<li><strong>{{ item.nome_encontrado }}</strong> (Arquivo: {{ item.arquivo }})</li>	Mostra o nome e o arquivo do item, puxando do Python.
+{% endfor %}	Finaliza o for.
+{% elif termo %}	Se não tiver resultados, mas tiver um termo pesquisado, mostra que não encontrou nada.
+{% endif %}	Finaliza o if.
+
+
+FASE 2 - O QUE CADA ARQUIVO VAI FAZER:
+app.py	Cria a barra de busca e exibe resultados
+crawler_cwi.py	Faz a análise do CWI baseado no que foi digitado
+templates/index.html	Frontend para o usuário (campo de busca + loading + resultados)
+static/styles.css	Deixa tudo estiloso (pastel minimalista 😍)
+
+
+🛠 FASE 3 - COMO VAMOS FUNCIONAR:
+O usuário digita o nome do item (exemplo: "Centralizer").
+O sistema procura nos arquivos da pasta exemplos_cwi/ usando BeautifulSoup.
+Encontra o item → faz a validação das regras.
+Mostra o resultado na tela:
+✅ Se está tudo certo
+⚠️ Ou lista de erros encontrados
+
