@@ -34,7 +34,7 @@ def buscar_item(nome_item, pasta='exemplos_cwi'):
 
     return resultados
 
-# NOVO: Função para salvar o relatório
+# Função para salvar o relatório
 def salvar_relatorio(erros, pasta_relatórios='relatorios'):
     os.makedirs(pasta_relatórios, exist_ok=True)
 

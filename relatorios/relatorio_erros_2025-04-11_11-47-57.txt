@@ -1,8 +1,0 @@
-Relatório de Erros Encontrados:
-
-- Componente 'Part1_SIDASM' listado em Component Parts não encontrado em Definition Objects.
-- Componente 'Part2_SIDASM' listado em Component Parts não encontrado em Definition Objects.
-- Componente 'Part3_SIDASM' listado em Component Parts não encontrado em Definition Objects.
-- Componente 'Part4_SIDASM' listado em Component Parts não encontrado em Definition Objects.
-- Procedure 'Instrucoes_1.pas1' listado em Component Parts não encontrado em Definition Objects.
-- Procedure 'Instrucoes_2.Noex#4' listado em Component Parts não encontrado em Definition Objects.
